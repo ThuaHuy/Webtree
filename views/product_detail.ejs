@@ -1,0 +1,342 @@
+<% if ( typeof username === 'undefined') { %>
+	 
+    <%- include("partials/header2"); %>
+<% } else { %>
+	<%- include("partials/header2",{username: username}); %>
+	<% } %>
+				<h4><span>Chi tiết sản phẩm</span></h4>
+			
+			<section class="main-content">				
+				<div class="row">						
+					<div class="span9">
+						<div class="row">
+							<div class="span4">
+								<a href="/themes/images/cloth/<%= detail.img %> " class="thumbnail" data-fancybox-group="group1" title="Description 1"><img alt="" src="/themes/images/cloth/<%= detail.img %> "></a>												
+								<ul class="thumbnails small">								
+									<li class="span1">
+										<a href="/themes/images/cloth/<%= detail.img1 %>" class="thumbnail" data-fancybox-group="group1" title="Description 2"><img src="/themes/images/cloth/<%= detail.img1 %>" alt=""></a>
+									</li>								
+									<li class="span1">
+										<a href="/themes/images/cloth/<%= detail.img2 %>" class="thumbnail" data-fancybox-group="group1" title="Description 3"><img src="/themes/images/cloth/<%= detail.img2 %>" alt=""></a>
+									</li>													
+									<li class="span1">
+										<a href="/themes/images/cloth/<%= detail.img3 %>" class="thumbnail" data-fancybox-group="group1" title="Description 4"><img src="/themes/images/cloth/<%= detail.img3 %>" alt=""></a>
+									</li>
+									<li class="span1">
+										<a href="/themes/images/cloth/<%= detail.img4 %>" class="thumbnail" data-fancybox-group="group1" title="Description 5"><img src="/themes/images/cloth/<%= detail.img4 %>" alt=""></a>
+									</li>
+								</ul>
+							</div>
+							<div class="span5">
+								<address>
+									<strong>Tên cây:</strong> <span><%= detail.name %></span><br>
+									<strong>Loại cây:</strong> <span><%= detail.category_name %></span><br>
+									
+									
+									
+											
+								</address>									
+								<h4><strong>Giá:<%= detail.price %>.000đ</strong></h4>
+							</div>
+							<div class="span5">
+								<form class="form-inline" method="post" action="/cart">
+									<p>&nbsp;</p>
+									<label>SL:</label>
+									<input type="text" class="span1" name="quantity" required>
+									<input type="hidden" name="id" value="<%= detail.id %>">
+									<% if (typeof username ==='undefined') { %> 
+										<input class="btn btn-inverse" type="submit" value="Thêm vào giỏ" name="addcart" disabled alt="Chưa đăng nhập">	
+									<%  } else { %> 
+									<input class="btn btn-inverse" type="submit" value="Thêm vào giỏ" name="addcart"  alt="Chưa đăng nhập">
+									<% 	} %> 
+									
+								</form>
+							</div>							
+						</div>
+						<div class="row">
+							<div class="span9">
+								<ul class="nav nav-tabs" id="myTab">
+									<li class="active"><a href="#home">Miêu tả</a></li>
+									<li class=""><a href="#profile">Thông tin sản phẩm</a></li>
+								</ul>							 
+								<div class="tab-content">
+									<div class="tab-pane active" id="home">Chúng ta thường xuyên phải tiếp xúc với loại ánh sáng xanh từ màn hình máy tính và điện thoại. Điều này nguy hiểm khi hệ thần kinh của chúng ta liên tục bị kích thích, và khiến chúng ta ngày càng căng thẳng hơn thì rất nhiều nghiên cứu đã chứng minh thực vật có tác dụng hỗ trợ phục hồi sức khỏe.	</div>
+									<div class="tab-pane" id="profile">
+										<table class="table table-striped shop_attributes">	
+											<tbody>
+												<tr class="">
+													<th>Tên:</th>
+													<td><%= detail.name %></td>
+												</tr>		
+												<tr class="alt">
+													<th>Bảo hành:</th>
+													<td><%= detail.insurance %></td>
+												</tr>
+												<tr class="">
+													<th>Trọng lượng:</th>
+													<td><%= detail.weight %></td>
+												</tr>
+												
+												<tr class="">
+													<th>Xuất xứ:</th>
+													<td><%= detail.origin %></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>							
+							</div>			
+                                   
+							<div class="span9">	
+								<br>
+								<h4 class="title">
+									<span class="pull-left"><span class="text"><strong>Sản phẩm</strong> cùng loại</span></span>
+									<span class="pull-right">
+										<a class="left button" href="#myCarousel-1" data-slide="prev"></a><a class="right button" href="#myCarousel-1" data-slide="next"></a>
+									</span>
+								</h4>
+								<div id="myCarousel-1" class="carousel slide">
+									<div class="carousel-inner">
+										<div class="active item">
+											<ul class="thumbnails listing-products">
+												<li class="span3">
+													<div class="product-box">
+														<span class="sale_tag"></span>												
+														<a href="product_detail.php?id=TS1"><img alt="" src="/themes/images/cloth/caydeban/a2.jpg"></a><br/>
+														<a href="product_detail.php?id=TS1" class="title">Cây Ngũ Gia Bì Thủy Sinh</a><br/>
+														
+														<a href="product_detail.php?id=TS1"><p class="price">125.000đ</p></a>
+														
+													</div>
+												</li>
+												<li class="span3">
+													<div class="product-box">
+														<span class="sale_tag"></span>												
+														<a href="product_detail.php?id=MN1"><img alt="" src="/themes/images/cloth/caydeban/a10.jpg"></a><br/>
+														<a href="product_detail.php?id=MN1" class="title">Cây Mạ Non</a><br/>
+														
+														<a href="product_detail.php?id=MN1"><p class="price">99.000đ</p></a>
+														
+													</div>
+												</li>       
+												<li class="span3">
+													<div class="product-box">												
+														<a href="product_detail.php?id=VS1"><img alt="" src="/themes/images/cloth/caydeban/a3.jpg"></a><br/>
+														<a href="product_detail.php?id=VS1" class="title">Cây Trầu Bà Đế Vương Xanh</a><br/>
+														<a href="product_detail.php?id=VS1">
+														<p class="price">129.000đ</p></a>
+														
+													</div>
+												</li>												
+											</ul>
+										</div>
+										<div class="item">
+											<ul class="thumbnails listing-products">
+												<li class="span3">
+													<div class="product-box">
+														<span class="sale_tag"></span>												
+														<a href="product_detail.php?id=TT1"><img alt="" src="/themes/images/cloth/caydeban/a4.jpg"></a><br/>
+														<a href="product_detail.php?id=TT1" class="title">Cây Thủy Tùng</a><br/>
+													    <a href="product_detail.php?id=Tt1">
+														<p class="price">125.000đ</p></a>
+														
+													</div>
+												</li>       
+												<li class="span3">
+													<div class="product-box">												
+														<a href="product_detail.php?id=BA1"><img alt="" src="/themes/images/cloth/caydeban/a5.jpg"></a><br/>
+														<a href="product_detail.php?id=BA1"  class="title">Cây Bình An</a><br/>
+														<a href="product_detail.php?id=BA1">
+														<p class="price">149.000đ</p>
+														</a>
+													</div>
+												</li>
+												<li class="span3">
+													<div class="product-box">
+														<span class="sale_tag"></span>												
+														<a href="product_detail.php?id=CT1"><img alt="" src="/themes/images/cloth/caydeban/a6.jpg"></a><br/>
+														<a href="product_detail.php?id=CT1" class="title">Cây Dương Xỉ Cẩm Thạch</a><br/>
+														<a href="product_detail.php?id=CT1">
+														<p class="price">125.000đ</p></a>
+														
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="span9">	
+								<br>
+								<h4 class="title">
+									<span class="pull-left"><span class="text"><strong>Sản phẩm</strong> siêu mới</span></span>
+									<span class="pull-right">
+										<a class="left button" href="#myCarousel-2" data-slide="prev"></a><a class="right button" href="#myCarousel-2" data-slide="next"></a>
+									</span>
+								</h4>
+								<div id="myCarousel-2" class="carousel slide">
+									<div class="carousel-inner">
+										<div class="active item">
+											<ul class="thumbnails listing-products">
+												<li class="span3">
+													<div class="product-box">
+														<span class="sale_tag"></span>												
+														<a href="product_detail.php?id=SD20"><img alt="" src="/themes/images/cloth/caysenda/a1.jpg"></a><br/>
+														<a href="product_detail.php?id=SD20" class="title">Combo 20 Sen Đá</a><br/>
+													      <a href="product_detail.php?id=SD20">
+														<p class="price">299.000đ</p>
+														</a>
+													</div>
+												</li>
+												<li class="span3">
+													<div class="product-box">
+														<span class="sale_tag"></span>												
+														<a href="product_detail.php?id=SD10"><img alt="" src="/themes/images/cloth/caysenda/a2.jpg"></a><br/>
+														<a href="product_detail.php?id=SD10" class="title">Combo 10 Sen Đá</a><br/>
+														<a href="product_detail.php?id=SD10">
+														<p class="price">149.000đ</p></a>
+														
+													</div>
+												</li>       
+												<li class="span3">
+													<div class="product-box">												
+														<a href="product_detail.php?id=GS1"><img alt="" src="/themes/images/cloth/caysenda/a3.jpg"></a><br/>
+														<a href="product_detail.php?id=GS1" class="title">Cây Sen Đá Giọt Sương</a><br/>
+														<a href="product_detail.php?id=GS1">
+														<p class="price">119.000đ</p>
+													</a>
+														
+													</div>
+												</li>												
+											</ul>
+										</div>
+										<div class="item">
+											<ul class="thumbnails listing-products">
+												<li class="span3">
+													<div class="product-box">
+														<span class="sale_tag"></span>												
+														<a href="product_detail.php?id=SD20"><img alt="" src="/themes/images/cloth/caysenda/a4.jpg" height="255px" width="255px"></a><br/>
+														<a href="product_detail.php?id=SD20" class="title">Sen Đá Chuỗi Ngọc Đứng</a><br/>
+											           <a href="product_detail.php?id=SD20">
+														<p class="price">25.000đ</p></a>
+														
+													</div>
+												</li>       
+												<li class="span3">
+													<div class="product-box">												
+														<a href="product_detail.php?id=BA1"><img alt="" src="/themes/images/cloth/xuongrong/a1.jpg"></a><br/>
+														<a href="product_detail.php?id=BA1"  class="title">Cây Xương Rồng Bông Gòn</a><br/>
+														
+														<p class="price">69.000đ</p>
+														
+													</div>
+												</li>
+												<li class="span3">
+													<div class="product-box">
+														<span class="sale_tag"></span>												
+														<a href="product_detail.php?id=DT1"><img alt="" src="/themes/images/cloth/caythuysinh/a1.jpg"></a><br/>
+														<a href="product_detail.php?id=DT1" class="title">Cỏ Đồng Tiền </a><br/>
+													    <a href="product_detail.php?id=DT1">
+														<p class="price">99.000đ</p></a>
+														
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="span3 col">
+						<div class="block">	
+							
+							<br/>
+							<ul class="nav nav-list below">
+								<li class="nav-header">Loại Cây</li>
+								<% category.forEach(element => { %>
+								<li><a href="/category/<%= element.name %> "><%= element.name %></a></li>
+								<% }); %> 
+							
+							</ul>
+						</div>
+						<div class="block">
+							<h4 class="title">
+								<span class="pull-left"><span class="text">Ngẫu nhiên</span></span>
+								<span class="pull-right">
+									<a class="left button" href="#myCarousel" data-slide="prev"></a><a class="right button" href="#myCarousel" data-slide="next"></a>
+								</span>
+							</h4>
+							<div id="myCarousel" class="carousel slide">
+								<div class="carousel-inner">
+									<div class="active item">
+										<ul class="thumbnails listing-products">
+											<li class="span3">
+												<div class="product-box">
+													<span class="sale_tag"></span>												
+													<a href="product_detail.php?id=SD10"><img alt="" src="/themes/images/cloth/caysenda/a2.jpg"></a><br/>
+													<a href="product_detail.php?id=SD10" class="title">Combo 10 Sen Đá</a><br/>
+													<a href="product_detail.php?id=SD10">
+													<p class="price">149.000đ</p></a>
+											
+												</div>
+											</li>
+										</ul>
+									</div>
+									<div class="item">
+										<ul class="thumbnails listing-products">
+											<li class="span3">
+												<div class="product-box">												
+													<a href="product_detail.php?id=SD20"><img alt="" src="/themes/images/cloth/caysenda/a1.jpg"></a><br/>
+													<a href="product_detail.php?id=SD20" class="title">Combo 20 Sen Đá</a><br/>
+													<a href="product_detail.php?id=SD20">
+													<p class="price">299.000đ</p></a>
+													
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="block">								
+							<h4 class="title"><strong>Cây</strong> Mới</h4>		
+												
+							<ul class="small-product">
+								<li>
+								     <a href="/product_detail/6257098e7b5d4d97407e771e">
+										<img src="/themes/images/cloth/caysenda/a3.jpg">
+									</a>
+									<a href="/product_detail/6257098e7b5d4d97407e771e"> Cây sen đá giọt sương</a>
+									
+								</li>
+							
+								 
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>			
+				<%- include("partials/footer3") -%> 
+					<script>
+			$(function () {
+				$('#myTab a:first').tab('show');
+				$('#myTab a').click(function (e) {
+					e.preventDefault();
+					$(this).tab('show');
+				})
+			})
+			$(document).ready(function() {
+				$('.thumbnail').fancybox({
+					openEffect  : 'none',
+					closeEffect : 'none'
+				});
+				
+				$('#myCarousel-2').carousel({
+                    interval: 2500
+                });								
+			});
+		</script>
+		</body>
+		</html>

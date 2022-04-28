@@ -1,0 +1,96 @@
+<%- include("partials/header") %> 		
+	<section class="main-content">		
+		<div class="row">
+			<div class="span5">					
+				<h4 class="title"><span class="text"><strong>Thông tin</strong> cá nhân</span></h4>
+				<form action="/account/update_account" method="post">
+					<input type="hidden" name="next" value="/">
+					<fieldset>
+						
+							
+						 
+						<div class="control-group">
+							<label class="control-label">Họ tên</label>
+							<div class="controls">
+								<input type="value"  class="output-xlarge" name="name" id="name" value="<%= my_account.Name %>" placeholder="<%= my_account.Name %> ">
+							</div>
+						</div>
+						
+						
+							
+						<div class="control-group">
+							<label class="control-label">Email</label>
+							<div class="controls">
+								<input type="value"  class="output-xlarge" name="email" id="address" value="<%= my_account.Email %>" placeholder="<%= my_account.Email %>" >
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label">SDT</label>
+							<div class="controls">
+								<input type="value"  class="output-xlarge" name="phone" id="address" placeholder="<%= my_account.Phone %>" value="<%= my_account.Phone %>">
+							</div>
+						</div>
+						<div class="control-group">
+							<input tabindex="3" class="btn btn-primary large" type="submit" id="submit"  value="Thay đổi thông tin" name="change">
+							
+							
+							
+							<hr>
+						</div>
+					</fieldset>
+				
+					
+				</form>
+				<a href="logout"><input tabindex="3" class="btn btn-primary large" type="submit" id="submit"  value="Đăng xuất" name="logout"></a>
+				<a href="account/change_pass"><button class="btn btn-primary large" type="submit" id="submit"  value="doi mk">Đổi mật khẩu</button></a>				
+			</div>
+			<div class="span7">					
+				<h4 class="title"><span class="text"><strong></strong> </span></h4>
+				<form action="newcustomer.php" method="post" class="form-stacked">
+					<fieldset>
+						<div class="control-group">
+							<label class="control-label"><strong>Các sản phẩm giá rẻ</strong> </label>
+						</div>
+						<li class="span3">
+							<div class="product-box">
+														<p><a href="product_detail.php?id=BX1"><img src="themes/images/cloth/caysenda/a8.jpg" alt="" /></a></p>
+														<a href="product_detail.php?id=BX!" class="title">Sen Đá Cánh Bướm Xanh</a><br/>
+														<a href="product_detail.php?id=BX1" class="category"><p class="price">25.000đ</p>
+															
+												          </a>
+													</div>
+						</li>
+						<li class="span3">
+							<div class="product-box">
+														<p><a href="product_detail.php?id=HP2"><img src="themes/images/cloth/caysenda/a6.jpg" alt="" /></a></p>
+														<a href="product_detail.php?id=HP2" class="title">Sen Đá Hồng Phấn</a><br/>
+														<a href="product_detail.php?id=HP2" class="category"><p class="price">25.000đ</p>
+															
+												          </a>
+													</div>
+						</li>
+						<li class="span3">
+							<div class="product-box">
+														<p><a href="product_detail.php?id=ND1"><img src="themes/images/cloth/caysenda/a4.jpg" alt="" /></a></p>
+														<a href="product_detail.php?id=ND1" class="title">Sen Đá Chuỗi Ngọc Đứng</a><br/>
+														<a href="product_detail.php?id=ND1" class="category"><p class="price">25.000đ</p>
+															
+												          </a>
+													</div>
+						</li>
+						<li class="span3">
+							<div class="product-box">
+														<p><a href="product_detail.php?id=ND2"><img src="themes/images/cloth/caysenda/a9.jpg" alt="" /></a></p>
+														<a href="product_detail.php?id=ND2" class="title">Sen Đá Nhím Đen</a><br/>
+														<a href="product_detail.php?id=ND2" class="category"><p class="price">30.000đ</p>
+															
+												          </a>
+													</div>
+						</li>
+					</fieldset>
+					
+				</form>					
+			</div>				
+		</div>
+	</section>			
+	<%- include("partials/footer2") %> 	

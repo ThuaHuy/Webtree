@@ -1,0 +1,152 @@
+<%- include("partials/header") %> 	
+	</section>			
+	<section class="main-content">		
+		<div class="row">
+			<div class="span5">					
+				<h4 class="title"><span class="text"><strong>Đổi</strong> mật khẩu</span></h4>
+				<form action="/account/change_pass" method="post">
+					<input type="hidden" name="next" value="/">
+					<fieldset>
+						<div class="control-group">
+							<label class="control-label">Mật khẩu cũ</label>
+							<div class="controls">
+								<input type="text"  class="output-xlarge" name="passold"  id="address" value=""  >
+							</div>
+							</div>
+						<div class="control-group">
+							<label class="control-label">Mật khẩu mới</label>
+							<div class="controls">
+								<input type="text"  class="output-xlarge" name="passnew" id="name" value="">
+							</div>
+						</div>
+						
+						
+							
+						
+						
+						<div class="control-group">
+							<input tabindex="3" class="btn btn-primary large" type="submit" id="submit"  value="Đổi mật khẩu" name="change2">
+							
+							
+							
+							<hr>
+						</div>
+					</fieldset>
+
+					
+				</form>
+							
+			</div>
+			<div class="span7">					
+				<h4 class="title"><span class="text"><strong></strong> </span></h4>
+				<form action="newcustomer.php" method="post" class="form-stacked">
+					<fieldset>
+						<div class="control-group">
+							<label class="control-label"><strong>Các sản phẩm giá rẻ</strong> </label>
+						</div>
+						<li class="span3">
+							<div class="product-box">
+														<p><a href="product_detail.php?id=BX1"><img src="/themes/images/cloth/caysenda/a8.jpg" alt="" /></a></p>
+														<a href="product_detail.php?id=BX!" class="title">Sen Đá Cánh Bướm Xanh</a><br/>
+														<a href="product_detail.php?id=BX1" class="category"><p class="price">25.000đ</p>
+															
+												          </a>
+													</div>
+						</li>
+						<li class="span3">
+							<div class="product-box">
+														<p><a href="product_detail.php?id=HP2"><img src="/themes/images/cloth/caysenda/a6.jpg" alt="" /></a></p>
+														<a href="product_detail.php?id=HP2" class="title">Sen Đá Hồng Phấn</a><br/>
+														<a href="product_detail.php?id=HP2" class="category"><p class="price">25.000đ</p>
+															
+												          </a>
+													</div>
+						</li>
+						<li class="span3">
+							<div class="product-box">
+														<p><a href="product_detail.php?id=ND1"><img src="/themes/images/cloth/caysenda/a4.jpg" alt="" /></a></p>
+														<a href="product_detail.php?id=ND1" class="title">Sen Đá Chuỗi Ngọc Đứng</a><br/>
+														<a href="product_detail.php?id=ND1" class="category"><p class="price">25.000đ</p>
+															
+												          </a>
+													</div>
+						</li>
+						<li class="span3">
+							<div class="product-box">
+														<p><a href="product_detail.php?id=ND2"><img src="/themes/images/cloth/caysenda/a9.jpg" alt="" /></a></p>
+														<a href="product_detail.php?id=ND2" class="title">Sen Đá Nhím Đen</a><br/>
+														<a href="product_detail.php?id=ND2" class="category"><p class="price">30.000đ</p>
+															
+												          </a>
+													</div>
+						</li>
+					</fieldset>
+					
+				</form>					
+			</div>				
+		</div>
+	</section>			
+	<section style="background-color: #857474;" id="footer-bar">
+				<div class="row">
+					<div class="span3">
+						<h4>Điều Hướng</h4>
+						<ul class="nav">
+							<li><a href="./index.php">Trang chủ</a></li>  						
+							<li><a href="./cart.php">Giỏ hàng</a></li>
+							<li><a href="./contact.php">Liên hệ</a></li>
+							<li><a href="./register.php">Đăng nhập</a></li>							
+						</ul>					
+					</div>
+					<div class="span4">
+						<h4>My Account</h4>
+						<ul class="nav">
+							<li><a href="customer.php">Tài khoản của tôi</a></li>
+
+							<li><a href="products.php">Danh sách sản phẩm</a></li>
+							
+							<!-- <li><a href="#">Làm mới</a></li> -->
+						</ul>
+					</div>
+					<div class="span5">
+						<p class="logo"><!-- <img src="/themes/images/logo.png" class="site_logo" alt=""> --><h4>Htrees</h4></p>
+						<p style="color: white;">Website chúng tôi chuyên cung cấp các sản phẩm chất lượng có uy tín và mới nhất trên thị trường hiện nay
+							<br/>Hãy ghé thăm trang web của chúng tôi và đừng bỏ lỡ các sản phẩm mới nhé!</p>
+							<div style="margin-left: 60px;">
+								<a href="#" class="button">
+									<i class="fab fa-facebook-f fa-lg"></i>
+								</a>
+								<a href="#" class="button">
+									<i class="fab fa-twitter fa-lg"></i>
+								</a>
+								<a href="#" class="button">
+									<i class="fab fa-instagram fa-lg"></i>
+								</a>
+							</div>
+							
+						</div>					
+					</div>	
+				</section>
+				<section id="copyright">
+					<span>Copyright 2021 Cây cảnh Thừa Huy</span>
+				</section>
+	</div>
+	<script src="/themes/js/common.js"></script>
+	<script src="/themes/js/jquery.flexslider-min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$(document).ready(function() {
+				$('.flexslider').flexslider({
+					animation: "fade",
+					slideshowSpeed: 4000,
+					animationSpeed: 600,
+					controlNav: false,
+					directionNav: true,
+						controlsContainer: ".flex-container" // the container that holds the flexslider
+					});
+			});
+		});
+	
+		
+	</script>
+</body>
+</html>	

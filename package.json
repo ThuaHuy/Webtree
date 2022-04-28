@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "mongoose": "^6.2.11",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.15"
+  },
+  "name": "doan2_webbancay",
+  "description": "- 1512418 - Trần Duy Phương - 1512421 - Đinh Hữu Phước - 1512432 - Nguyễn Đăng Quang - 1512471 - Nguyễn Trung Tài #### Thông tin môn học #### - Đề Tài : Website buôn bán laptop. - Giảng viên phụ trách: Ngô Ngọc Đăng Khoa - k15 ĐH KHTN ### Các Chức năng đã làm ### 1 ### #### 1.1 Trang chủ #### - Hiển thị 10 sản phẩm mới nhất (giảm dần theo ngày tiếp nhận) - Hiển thị 10 sản phẩm bán chạy nhất (giảm dần theo số lượng bán) - Hiển thị 10 sản phẩm được xem nhiều nhất (giảm dần theo số lượt xem)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
